@@ -1,20 +1,24 @@
 const items = [
     {
+        id:1,
         name: "Dumbell 10 KG",
         price: "$19.99",
         imageUrl: "images/dumbellBackground.png",
     },
     {
+        id:2,
         name: "kettlebell 8 KG",
         price: "$9.99",
         imageUrl: "images/kettlebellBackground.png",
     },
     {
+        id:3,
         name: "Dumbell 10 KG",
         price: "$19.99",
         imageUrl: "images/dumbellBackground.png",
     },
     {
+        id:4,
         name: "kettlebell 8 KG",
         price: "$9.99",
         imageUrl: "images/kettlebellBackground.png",
@@ -32,7 +36,7 @@ function createItem(item){
         <div class="itemDescription">
             <h3 class="itemName">${item.name}</h3>
             <h1 class="itemPrice">${item.price}</h1>
-            <button class="itemButton">View Description</button>
+            <button class="itemButton" onClick="viewDescription(${item.id})">View Description</button>
         </div>
     </div>
 `;
@@ -46,4 +50,16 @@ function search(){
             item.classList.add('displayNone')
         }
     })
+}
+function viewDescription(itemId){
+    document.querySelector('.items').classList.add('displayNone')
+    const selectedItem = items.find(item => item.id === itemId)  
+    var el = `<p>${selectedItem.id}</p>`
+    document.querySelector('.content').innerHTML=el
+}
+function reserveItem(itemId){
+    document.querySelector('.items').classList.add('displayNone')
+    const selectedItem = items.find(item => item.id === itemId)                             
+    var el = `<p>${selectedItem.name}</p>`
+    document.querySelector('.content').innerHTML=el
 }
