@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+}
+
+/* Navbar stylings are added here */
+.navbar {
+    padding: 4px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+.navbar h1{
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-family: 'comic sans mS', 'cursive'; /* Change the font family */
+    font-weight: bold;
+    letter-spacing: 8px;
+    word-spacing: 6px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+}
+.logo{
+    cursor: pointer;
+}
+.search-input {
+    width: 200px;
+    padding: 10px;
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    outline: none;
+}
+.search-input:focus {
+    border-color: rgb(26, 115, 232);
+}
+
+/* Home page stylings are added here */
+.displayNone{
+    display: none;
+}
+.content {
+    margin: 14px 36px;
+}
+.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Three cards in a row, considering margins */
+    text-align: center;
+    transition: transform 0.2s;
+}
+.item:hover {
+    transform: scale(1.05);
+}
+.itemDescription {
+    padding: 20px;
+}
+.itemImage {
+    border-radius: 10px 10px 0 0;
+    max-width: 100%;
+    height: auto;
+}
+.itemName {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+.itemPrice {
+    padding: 10px;
+    font-size: 2em;
+    margin: 10px 0;
+    color: black;
+    font-weight: bold;
+}
+.itemButton {
+    background: rgba(0, 110, 255, 0.8);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding:10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2 em;
+}
+.itemButton:hover {
+    background: rgba(0, 110, 255);
+}
+
+/* Product description page stylings are added here */
+.wrapper {
+    height:420px;
+    width:80%;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+.product-img {
+    float: left;
+    height: 420px;
+    width: 50%;
+}
+.product-img img {
+border-radius: 7px 0 0 7px;
+}
+.product-info {
+float: left;
+height: 420px;
+width: 50%;
+border-radius: 0 7px 10px 7px;
+background-color: #ffffff;
+}
+.product-text {
+padding:10px 10px 20px 10px;
+height: 300px;
+}
+.product-text h1 {
+margin: 0 0 0 38px;
+padding-top: 52px;
+font-size: 34px;
+color: black;
+}
+.product-text h2 {
+margin: 0 0 47px 38px;
+font-size: 13px;
+font-weight: 400;
+text-transform: uppercase;
+color: black;
+letter-spacing: 0.2em;
+}
+.product-text p {
+height: 125px;
+margin: 0 0 0 38px;
+color: black;
+line-height: 1.7em;
+font-size: 15px;
+font-weight: lighter;
+overflow: hidden;
+}
+.product-price-btn {
+padding: 5px 0;
+position: relative;
+}
+.product-price-btn p {
+display: inline-block;
+position: absolute;
+height: 50px;
+margin: 7px 0 0 48px;
+color: black;
+}
+span {
+display: inline-block;
+height: 50px;
+font-size: 34px;
+font-weight:bold;
+}
+.product-price-btn button {
+float: right;
+height: 50px;
+margin: 0 23px 0 0;
+}
+
+/* Form stylings are added here */
+#referenceButtonContainer{
+    text-align: center;
+    padding: 3px;
+    margin-bottom: 0;
+}
+#referenceSubmitButton{
+    margin: 0px 4px;
+}
+#referenceCancelButton{
+    background: rgb(0,0,0,0.6);
+}
+#referenceCancelButton:hover{
+    background: rgb(0,0,0,0.8);
+}
+.formContainer {
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.inputField {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+}
+#email, #fname, #phone {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#address{
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/*Stylings added for tablet devices */
+@media(max-width: 1150px){
+    .item {
+        width: calc(50% - 20px);
+    }
+    .formContainer{
+        width: 100%;
+    }
+    .product-info{
+        width: 100%;
+    }
+    .product-img{
+        width: 100%;
+        height:500px;
+    }
+    .product-text{
+        padding: 0;
+        width:100%;
+    }
+    .product-price-btn{
+        width:100%;
+        padding:0;
+    }
+    body{
+        overflow-x: hidden
+    }
+}
+
+/*Stylings added for mobile devices */
+@media (max-width: 1000px) {
+    .item {
+        width: 100%; /* One card in a row, considering margins */
+    }
+}
